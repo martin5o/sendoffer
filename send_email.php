@@ -33,7 +33,7 @@ for ($i = 1; $i <= 3; $i++) {
 
         $angeboteHTML .= <<<HTML
 <p>
-    Bei einer monatlichen Sparrate von <strong>{$variante}€</strong> erreichst du eine 
+    Bei einer monatlichen Sparrate von <strong>{$variante}€</strong> erreicht dein Kind eine 
     <strong>Einmalauszahlung von {$ergebnis}€</strong> oder alternativ eine lebenslange 
     <strong>Zusatzrente von {$zusatz}€</strong>.
 </p>
@@ -77,7 +77,7 @@ $body = <<<EOD
     
     <p>Vielen Dank für das entspannte Telefonat mit Dir!</p>
     
-    <p>Anbei dein Lösungsvorschlag für dich und unsere Pflegervorsorge:</p>
+    <p>Anbei dein Lösungsvorschlag für deinen Kindersparer:</p>
     
     $angeboteHTML
     
@@ -87,7 +87,6 @@ $body = <<<EOD
         <li style="margin-bottom: 12px;">Jederzeitige Änderung der Fondsanlage kostenfrei möglich</li>
         <li style="margin-bottom: 12px;">Jederzeitige Entnahme von bis zu 50% des Kapitals möglich</li>
         <li style="margin-bottom: 12px;">Jederzeit Änderung der Sparbeträge möglich</li>
-        <li style="margin-bottom: 12px;">Beitragsgarantie möglich</li>
         <li style="margin-bottom: 12px;">Beitragssparpause möglich</li>
         <li>uvm.</li>
     </ul>
@@ -96,15 +95,15 @@ $body = <<<EOD
     Darfst uns dann danken! 😊</p>
     
     <div class="signature">
-        <p>Schöne Grüße<br>
-        Dein Pflegerhelden Team</p>
+        <p>Liebe Grüße<br>
+        Dein Kindersparer Team</p>
         
         <p>
-            <strong>Pflegerhelden</strong><br>
+            <strong>Kindersparer</strong><br>
             Langenpreisinger Str. 59<br>
             80995 München<br><br>
-            📧 info@pflegerhelden.de<br>
-            🌐 <a href="https://www.pflegerhelden.de" style="color: #0070c9; text-decoration: none;">www.pflegerhelden.de</a>
+            📧 info@kindersparer.de<br>
+            🌐 <a href="https://www.kindersparer.de" style="color: #0070c9; text-decoration: none;">www.pflegerhelden.de</a>
         </p>
     </div>
     
@@ -118,7 +117,7 @@ $body = <<<EOD
         Langenpreisinger Str. 59<br>
         80995 München<br>
         Telefon: +49 52198994073<br>
-        E-Mail: info@pflegerhelden.de</p>
+        E-Mail: info@kindersparer.de</p>
         
         <p>Berufsbezeichnung<br>
         Versicherungsmakler mit Erlaubnis nach § 34d Abs. 1 GewO</p>
@@ -155,7 +154,7 @@ $body = <<<EOD
         Martin Dominik Stacherczak<br>
         Langenpreisinger Str. 59<br>
         80995 München<br>
-        E-Mail: info@pflegerhelden.de</p>
+        E-Mail: info@kindersparer.de</p>
     </div>
 </body>
 </html>
@@ -169,19 +168,19 @@ $mail->Encoding = 'base64';
 try {
     // SMTP-Einstellungen für One.com
     $mail->isSMTP();
-    $mail->Host = 'send.one.com';
+    $mail->Host = 'mail.praedurion.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'info@pflegerhelden.de';
-    $mail->Password = 'PflegerHelden2025!';
+    $mail->Username = 'info@kindersparer.de';
+    $mail->Password = 'Kindersparer123!';
     $mail->SMTPSecure = 'ssl';
     $mail->Port = 465;
 
-    $mail->setFrom('info@pflegerhelden.de', 'Pflegerhelden');
+    $mail->setFrom('info@kindersparer.de', 'Kindersparer');
     $mail->addAddress($email);
-    $mail->addBCC('info@pflegerhelden.de');
+    $mail->addBCC('angebot@kindersparer.de');
 
     $mail->isHTML(true);
-    $mail->Subject = 'Dein persönliches Angebot zur Pflegervorsorge 🫶🏼';
+    $mail->Subject = 'Dein persönliches Kindersparer Angebot 🫶🏼';
     $mail->Body    = $body;
 
     // Angebot-PDFs anhängen
@@ -206,4 +205,5 @@ try {
 } catch (Exception $e) {
     echo "Fehler beim Senden der E-Mail: {$mail->ErrorInfo}";
 }
+
 ?>
