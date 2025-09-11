@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Angebot verschickt | Pflegerhelden</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="https://storage.googleapis.com/msgsndr/9Q6zqDZEBXJP0hGHLcLV/media/67cfec9bc6d47c7febd7f3cf.png" type="image/png">
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --primary: #007aff;
+            --primary-hover: #0066cc;
+            --text: #1d1d1f;
+            --text-light: #8e8e93;
+            --border: #e0e0e0;
+            --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            --radius: 14px;
+            --spacing-xs: 6px;
+            --spacing-sm: 10px;
+            --spacing-md: 14px;
+            --spacing-lg: 18px;
+            --success: #34c759;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text);
+            line-height: 1.5;
+            padding: var(--spacing-sm);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-size: 15px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 680px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1;
+            padding: 0;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            margin: 0;
+            text-align: center;
+            padding: var(--spacing-lg);
+        }
+
+        .icon-success {
+            font-size: 3.5rem;
+            margin-bottom: var(--spacing-sm);
+            color: var(--success);
+            animation: pulse 1.5s infinite;
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            color: var(--text);
+            margin-bottom: var(--spacing-sm);
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: var(--spacing-md);
+            line-height: 1.5;
+        }
+
+        .highlight {
+            background: rgba(0, 122, 255, 0.05);
+            border-left: 4px solid var(--primary);
+            padding: var(--spacing-md);
+            border-radius: 10px;
+            margin: var(--spacing-md) 0;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text);
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .emoji-grid {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+            flex-wrap: wrap;
+        }
+
+        .emoji {
+            font-size: 1.8rem;
+            background: #f8f8f8;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .emoji:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .emoji:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        .btn-back {
+            display: inline-block;
+            margin-top: var(--spacing-md);
+            padding: 14px 20px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 10px rgba(0, 122, 255, 0.2);
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .btn-back:hover {
+            background: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+        }
+
+        .signature {
+            margin-top: var(--spacing-lg);
+            padding-top: var(--spacing-md);
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: auto;
+            padding-top: var(--spacing-lg);
+            color: var(--text-light);
+            font-size: 0.8rem;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* iOS-spezifische Anpassungen */
+        @media (max-width: 768px) {
+            body {
+                padding: 8px;
+                font-size: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            
+            .container {
+                max-width: 100%;
+                padding: 0;
+            }
+            
+            .card {
+                border-radius: 14px;
+                border: none;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+                padding: var(--spacing-md);
+                margin: 0;
+            }
+            
+            .icon-success {
+                font-size: 3rem;
+                margin-bottom: var(--spacing-xs);
+            }
+            
+            h1 {
+                font-size: 1.4rem;
+                margin-bottom: var(--spacing-xs);
+            }
+            
+            p {
+                font-size: 0.9rem;
+                margin-bottom: var(--spacing-sm);
+            }
+            
+            .highlight {
+                font-size: 0.95rem;
+                padding: var(--spacing-sm) var(--spacing-md);
+                margin: var(--spacing-sm) 0;
+                line-height: 1.4;
+            }
+            
+            .emoji {
+                width: 44px;
+                height: 44px;
+                font-size: 1.6rem;
+            }
+            
+            .btn-back {
+                padding: 14px;
+                font-size: 1rem;
+                border-radius: 12px;
+                max-width: 100%;
+            }
+            
+            .signature {
+                font-size: 0.8rem;
+                margin-top: var(--spacing-md);
+                padding-top: var(--spacing-sm);
+            }
+            
+            footer {
+                padding-top: var(--spacing-md);
+                font-size: 0.75rem;
+            }
+        }
+
+        /* Desktop-Optimierungen */
+        @media (min-width: 768px) {
+            .card {
+                padding: 30px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .highlight {
+                font-size: 1.1rem;
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="icon-success">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            
+            <h1>Super, dein Angebot wurde verschickt! 🎉</h1>
+            
+            <p>Die Informationen sind erfolgreich an den Kunden gesendet worden.</p>
+            
+            <div class="highlight">
+                Wir drücken dir die Daumen beim Folgetermin!<br>
+                Das wird ein voller Erfolg! 💼🚀
+            </div>
+            
+            <div class="emoji-grid">
+                <div class="emoji">💪</div>
+                <div class="emoji">💚</div>
+                <div class="emoji">🤝</div>
+            </div>
+            
+            <p>Dein Einsatz macht den Unterschied - weiter so!</p>
+            
+            <a href="index.html" class="btn-back">
+                <i class="fas fa-plus"></i> Neues Angebot erstellen
+            </a>
+            
+            <div class="signature">
+                <p>Dein Pflegerhelden Team</p>
+                <p><strong>Gemeinsam machen wir Pflegeberufe zukunftssicher!</strong></p>
+            </div>
+        </div>
+        
+        <footer>
+            <p></p>
+        </footer>
+    </div>
+</body>
+</html>
