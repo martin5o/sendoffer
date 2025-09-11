@@ -103,7 +103,7 @@ $body = <<<EOD
             Langenpreisinger Str. 59<br>
             80995 München<br><br>
             📧 info@kindersparer.de<br>
-            🌐 <a href="https://www.kindersparer.de" style="color: #0070c9; text-decoration: none;">www.pflegerhelden.de</a>
+            🌐 <a href="https://www.kindersparer.de" style="color: #0070c9; text-decoration: none;">www.kindersparer.de</a>
         </p>
     </div>
     
@@ -207,3 +207,4 @@ try {
 }
 
 ?>
+
