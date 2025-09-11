@@ -1,13 +1,28 @@
+# 1️⃣ Basis-Image mit PHP-FPM
 FROM php:8.2-fpm-alpine
 
+# 2️⃣ Arbeitsverzeichnis
 WORKDIR /app
 
+# 3️⃣ Dateien kopieren
 COPY . .
 
-RUN docker-php-ext-install mysqli pdo pdo_mysql
+# 4️⃣ PHP-Erweiterungen installieren (falls benötigt)
+RUN docker-php-ext-install pdo pdo_mysql
 
-# Installiere Composer, falls du PHPMailer per Composer nutzen willst
-# RUN apk add --no-cache composer
+# 5️⃣ Nginx installieren
+RUN apk add --no-cache nginx supervisor
 
-EXPOSE 9000
-CMD ["php-fpm"]
+# 6️⃣ Nginx konfigurieren
+RUN mkdir -p /run/nginx /var/log/nginx
+
+COPY nginx.conf /etc/nginx/nginx.conf
+
+# 7️⃣ Supervisor konfigurieren, um PHP-FPM + Nginx zusammen laufen zu lassen
+COPY supervisord.conf /etc/supervisord.conf
+
+# 8️⃣ Port freigeben
+EXPOSE 80
+
+# 9️⃣ Startbefehl
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
