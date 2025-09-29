@@ -33,7 +33,7 @@ for ($i = 1; $i <= 3; $i++) {
 
         $angeboteHTML .= <<<HTML
 <p>
-    Bei einer monatlichen Sparrate von <strong>{$variante}€</strong> erreicht dein Kind eine 
+    Bei einer monatlichen Sparrate von <strong>{$variante}€</strong> erreichst du eine 
     <strong>Einmalauszahlung von {$ergebnis}€</strong> oder alternativ eine lebenslange 
     <strong>Zusatzrente von {$zusatz}€</strong>.
 </p>
@@ -99,7 +99,7 @@ $body = <<<EOD
         Dein RentenDoc Team</p>
         
         <p>
-            <strong>Kindersparer</strong><br>
+            <strong>RentenDoc</strong><br>
             Langenpreisinger Str. 59<br>
             80995 München<br><br>
             📧 info@rentendoc.de<br>
