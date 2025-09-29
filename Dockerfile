@@ -21,7 +21,14 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY supervisord.conf /etc/supervisord.conf
 
 # 🔧 PHP Upload-Limits hochsetzen (50 MB)
-RUN echo "upload_max_filesize=50M\npost_max_size=50M" > /usr/local/etc/php/conf.d/uploads.ini
+RUN { \
+    echo "file_uploads=On"; \
+    echo "memory_limit=256M"; \
+    echo "upload_max_filesize=50M"; \
+    echo "post_max_size=50M"; \
+    echo "max_execution_time=300"; \
+} > /usr/local/etc/php/conf.d/uploads.ini
+
 
 # 8️⃣ Port freigeben
 EXPOSE 80
