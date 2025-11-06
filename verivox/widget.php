@@ -9,48 +9,76 @@ $widgetUrl = "https://partner.vxcp.de/ffIn9CaJQO9SGy2p/MAK211620/widget.php?makl
 // ----------------------------
 // Statische Texte
 $translations = [
-    "Berechnen" => "Oblicz",
-    "Ihre Postleitzahl" => "Twój kod pocztowy",
-    "Personenzahl oder kWh / Jahr" => "Liczba osób lub kWh / rok",
-    "kWh / Jahr" => "kWh / rok",
-    "Wohnungsgröße oder kWh/Jahr" => "Rozmiar mieszkania lub kWh/rok",
-    "Jetzt vergleichen!" => "Porównaj teraz!",
-    "Vertragslaufzeit" => "Okres umowy",
-    "Datenvolumen" => "Dane mobilne",
-    "Geschwindigkeit auswählen" => "Wybierz prędkość",
-    "Freie Verwendung" => "Dowolne przeznaczenie",
-    "Kreditbetrag (Euro)" => "Kwota kredytu (Euro)",
-    "Kreditlaufzeit" => "Okres kredytowania",
+    // Überschriften / h2 / Formulare
     "Stromvergleich" => "Porównanie prądu",
+    "Heizstromvergleich" => "Porównanie prądu grzewczego",
+    "Gewerbestromvergleich" => "Porównanie prądu dla firm",
     "Gasvergleich" => "Porównanie gazu",
+    "Gewerbegasvergleich" => "Porównanie gazu dla firm",
     "DSL-Vergleich" => "Porównanie internetu",
     "Handytarife" => "Taryfy telefoniczne",
     "Mobiles Internet" => "Internet mobilny",
     "KFZ-Versicherungsvergleich" => "Porównanie ubezpieczeń samochodowych",
     "Ratenkredit-Vergleich" => "Porównanie kredytów ratalnych",
     "Versicherungen" => "Ubezpieczenia",
-    "Tarife vergleichen" => "Porównaj oferty",
+
+    // Buttons
+    "Jetzt vergleichen!" => "Porównaj teraz!",
+
+    // Labels / Placeholder
+    "Ihre Postleitzahl" => "Twój kod pocztowy",
+    "Ort" => "Miasto",
+    "Personenzahl oder kWh / Jahr" => "Liczba osób lub kWh / rok",
+    "Wohnungsgröße oder kWh/Jahr" => "Powierzchnia mieszkania lub kWh/rok",
+    "Geschwindigkeit auswählen" => "Wybierz prędkość",
+    "Vertragslaufzeit" => "Czas trwania umowy",
+    "Datenvolumen" => "Pakiet danych",
+    "Kreditbetrag (Euro)" => "Kwota kredytu (Euro)",
+    "Kreditlaufzeit" => "Okres kredytowania",
+    "Verwendung" => "Cel kredytu",
+
+    // Select-Optionen
+    "Alle" => "Wszystkie",
+    "unbegrenzt" => "bez limitu",
+    "1 Monat" => "1 miesiąc",
+    "24 Monate" => "24 miesiące",
+    "Freie Verwendung" => "Dowolny cel",
+    "Umschuldung / Kreditablösung" => "Refinansowanie / spłata kredytu",
+    "Auto / Motorrad" => "Samochód / Motocykl",
+    "Modernisierung / Renovierung" => "Modernizacja / Remont",
+    "Ausgleich Girokonto" => "Wyrównanie konta",
+    "Gewerbe / Selbstständige" => "Biznes / Samozatrudnienie",
+
+    // Versicherungstypen
+    "Hausrat" => "Ubezpieczenie mienia",
+    "Wohngebäude" => "Ubezpieczenie budynku mieszkalnego",
+    "Tierhalterhaftpflicht" => "Ubezpieczenie odpowiedzialności właściciela zwierząt",
+    "Rechtsschutz" => "Ubezpieczenie ochrony prawnej",
+    "Privathaftpflicht" => "Ubezpieczenie OC prywatne",
+
+    // Teaser / Bottom
+    "Tarife vergleichen" => "Porównaj taryfy",
     "Direkt abschließen" => "Zamów od razu",
     "Clever sparen" => "Oszczędzaj mądrze",
-    "ein Service der Verivox GmbH" => "usługa Verivox GmbH",
-    "Verträge hier kündigen" => "Wypowiedź umów tutaj",
-    "Datenschutzbestimmungen" => "Polityka prywatności",
+
+    // Teaser-Slogans
     "Jetzt sparen!" => "Oszczędzaj teraz!",
-    "Stromanbieter vergleichen beim Testsieger" => "Porównaj dostawców energii z liderem testu",
-    "Gas vergleichen beim Testsieger" => "Porównaj gaz z liderem testu",
+    "Stromanbieter vergleichen beim Testsieger" => "Porównaj dostawców prądu u lidera testów",
+    "Gas vergleichen beim Testsieger" => "Porównaj gaz u lidera testów",
     "Internet-Vergleich" => "Porównanie internetu",
-    "Mit Highspeed surfen zum besten Preis" => "Surfuj z wysoką prędkością po najlepszej cenie",
+    "Mit Highspeed surfen zum besten Preis" => "Surfuj z dużą prędkością w najlepszej cenie",
     "Handytarife online vergleichen!" => "Porównaj taryfy telefoniczne online!",
-    "Günstige Deals & Top-Handytarife" => "Tanie oferty i najlepsze taryfy",
-    "Für mehr Spaß beim Surfen!" => "Więcej przyjemności podczas surfowania!",
-    "Mobil surfen: Datentarife im Vergleich" => "Mobilne surfowanie: porównanie taryf danych",
-    "Der beste Schutz für Ihr Auto" => "Najlepsza ochrona Twojego samochodu",
-    "KFZ-Versicherung bis zu 78% günstiger" => "Ubezpieczenie samochodu nawet 78% taniej",
-    "Schnell und 100% kostenlos" => "Szybko i 100% za darmo",
-    "Günstige Kredite vom Testsieger" => "Tanie kredyty od lidera testu",
+    "Günstige Deals & Top-Handytarife" => "Tanie oferty & najlepsze taryfy",
+    "Für mehr Spaß beim Surfen!" => "Więcej radości podczas surfowania!",
+    "Mobil surfen: Datentarife im Vergleich" => "Mobilne surfowanie: porównanie pakietów danych",
+    "Der beste Schutz für Ihr Auto" => "Najlepsza ochrona dla Twojego samochodu",
+    "KFZ-Versicherung bis zu 78% günstiger" => "Ubezpieczenie samochodu nawet do 78% taniej",
+    "Schnell und 100% kostenlos" => "Szybko i w 100% bezpłatnie",
+    "Günstige Kredite vom Testsieger" => "Tanie kredyty od lidera testów",
     "Versicherungen vergleichen" => "Porównaj ubezpieczenia",
     "Günstig und sorgenfrei versichert" => "Tanie i bezpieczne ubezpieczenie"
 ];
+
 
 // Dynamische Texte in data-Attributen (h4, li)
 $dataAttributes = [
