@@ -42,123 +42,78 @@ HTML;
 }
 
 // E-Mail-Inhalt vorbereiten
+$jahr = date('Y');
+
 $body = <<<EOD
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <style>
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
-            line-height: 1.5; 
-            color: #333; 
-            max-width: 650px; 
-            margin: 0 auto; 
-            padding: 28px 20px;
-        }
-        .divider {
-            height: 1px;
-            background: #eee;
-            margin: 32px 0;
-        }
-        .signature {
-            margin-top: 32px;
-        }
-        .footer {
-            font-size: 10px;
-            color: #777;
-            line-height: 1.5;
-            margin-top: 40px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>RentenDoc Angebot</title>
 </head>
-<body>
-    <p><strong>Hi $vorname</strong>,</p>
-    
-    <p>Vielen Dank für das entspannte Telefonat mit Dir!</p>
-    
-    <p>Anbei dein Lösungsvorschlag:</p>
-    
-    $angeboteHTML
-    
-    <p><strong>Deine Vorteile:</strong></p>
-    <ul style="padding-left: 20px; margin: 24px 0;">
-        <li style="margin-bottom: 12px;">Keine feste Laufzeit – nimm dir alles auf einmal oder eine mtl. Rente wann du willst (mindestens 5 Jahre)</li>
-        <li style="margin-bottom: 12px;">Jederzeitige Änderung der Fondsanlage kostenfrei möglich</li>
-        <li style="margin-bottom: 12px;">Jederzeitige Entnahme von bis zu 50% des Kapitals möglich</li>
-        <li style="margin-bottom: 12px;">Jederzeit Änderung der Sparbeträge möglich</li>
-        <li style="margin-bottom: 12px;">Beitragssparpause möglich</li>
-        <li>uvm.</li>
-    </ul>
-    
-    <p>Wir freuen uns sehr über unser nächstes Meeting! 🚀<br>
-    Darfst uns dann danken! 😊</p>
-    
-    <div class="signature">
-        <p>Liebe Grüße<br>
-        Dein RentenDoc Team</p>
-        
-        <p>
-            <strong>RentenDoc</strong><br>
-            Langenpreisinger Str. 59<br>
-            80995 München<br><br>
-            📧 info@rentendoc.de<br>
-            🌐 <a href="https://www.rentendoc.de" style="color: #0070c9; text-decoration: none;">www.rentendoc.de</a>
-        </p>
-    </div>
-    
-    <div class="divider"></div>
-    
-    <div class="footer">
-        <p>Angaben gemäß § 5 TMG:</p>
-        
-        <p>Vertreten durch:<br>
-        Martin Dominik Stacherczak<br>
-        Langenpreisinger Str. 59<br>
-        80995 München<br>
-        Telefon: 089 / 416136862<br>
-        E-Mail: info@rentendoc.de</p>
-        
-        <p>Berufsbezeichnung<br>
-        Versicherungsmakler mit Erlaubnis nach § 34d Abs. 1 GewO</p>
-        
-        <p>Erlaubnis- und Registerbehörde gemäß § 11 VersVermV:<br>
-        Industrie- und Handelskammer für München und Oberbayern<br>
-        Max-Joseph-Str. 2<br>
-        80333 München<br>
-        www.muenchen.ihk.de</p>
-        
-        <p>Registrierungsnummer gemäß § 34d GewO:<br>
-        D-8CJW-1NLO9-12</p>
-        
-        <p>Vermittlerregister:<br>
-        Deutsche Industrie- und Handelskammer (DIHK)<br>
-        Breite Straße 29<br>
-        10178 Berlin<br>
-        Telefon: 0180 600 58 50 (20 Cent/Anruf aus dem dt. Festnetz)<br>
-        www.vermittlerregister.info<br>
-        E-Mail: vr@dihk.de</p>
-        
-        <p>Berufsrechtliche Regelungen:<br>
-        § 34d Gewerbeordnung (GewO)<br>
-        §§ 59–68 Versicherungsvertragsgesetz (VVG)<br>
-        Verordnung über die Versicherungsvermittlung und -beratung (VersVermV)</p>
-        
-        <p>Diese Regelungen können eingesehen werden unter:<br>
-        www.gesetze-im-internet.de</p>
-        
-        <p>Beteiligungen:<br>
-        Es bestehen keine direkten oder indirekten Beteiligungen von über 10 % an oder von Versicherungsunternehmen.</p>
-        
-        <p>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:<br>
-        Martin Dominik Stacherczak<br>
-        Langenpreisinger Str. 59<br>
-        80995 München<br>
-        E-Mail: info@rentendoc.de</p>
-    </div>
+<body style="margin:0; padding:0; font-family: Arial, sans-serif; background-color:#f7f7f7;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#f7f7f7; padding:30px 0;">
+    <tr>
+      <td align="center">
+        <table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff; border-radius:12px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+          
+          <!-- Logo -->
+          <tr>
+            <td align="center" style="padding-top:20px;">
+              <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/QIrZym96iPvThdx5OjDe/media/68d186a983739ac9ed7133b2.png" 
+                   alt="RentenDoc Logo" style="display:block; max-width:200px;">
+            </td>
+          </tr>
+
+          <!-- Inhalt -->
+          <tr>
+            <td style="padding:30px; font-size:16px; color:#333333; line-height:1.6;">
+
+              <p>Hallo <strong>$vorname</strong>,</p>
+
+              <p>vielen Dank für das angenehme Gespräch mit dir! 🙌</p>
+              <p>Anbei findest du <strong>deinen persönlichen Lösungsvorschlag</strong>:</p>
+
+              $angeboteHTML
+
+              <p><strong>Deine Vorteile auf einen Blick:</strong></p>
+
+              <ul style="padding-left:20px; margin:24px 0;">
+                <li style="margin-bottom:12px;">Flexible Laufzeit – Auszahlung oder Rente, wann immer du willst</li>
+                <li style="margin-bottom:12px;">Teilentnahmen jederzeit möglich</li>
+                <li style="margin-bottom:12px;">Kostenfreie Änderung deiner Fondsanlage</li>
+                <li style="margin-bottom:12px;">Sparrate jederzeit anpassbar</li>
+                <li style="margin-bottom:12px;">Beitragspause möglich</li>
+                <li style="margin-bottom:12px;">Sondereinzahlungen kostenfrei möglich</li>
+                <li>und vieles mehr</li>
+              </ul>
+
+              <p>Wir freuen uns schon auf unser nächstes Gespräch! 🚀<br>
+              Du wirst begeistert sein! 😉</p>
+
+              <p>Viele Grüße<br>  
+              Dein <strong>RentenDoc-Team</strong></p>
+
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td align="center" style="background:#f0f0f0; padding:20px; font-size:12px; color:#666; line-height:1.5;">
+              © $jahr RentenDoc – Alle Rechte vorbehalten.<br>
+              Du kannst jederzeit direkt auf diese E-Mail antworten.
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
 </body>
 </html>
 EOD;
+
+
 
 // E-Mail senden
 $mail = new PHPMailer(true);
