@@ -60,7 +60,7 @@ $body = <<<EOD
           <!-- Logo -->
           <tr>
             <td align="center" style="padding-top:20px;">
-              <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/QIrZym96iPvThdx5OjDe/media/68d186a983739ac9ed7133b2.png" 
+              <img src="https://rentendoc.de/images/logo.png" 
                    alt="RentenDoc Logo" style="display:block; max-width:200px;">
             </td>
           </tr>
